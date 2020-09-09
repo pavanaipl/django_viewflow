@@ -19,9 +19,6 @@ from django.conf.urls import include, url
 from django.views import generic
 from material.frontend import urls as frontend_urls
 
-from .flows import HelloWorldFlow, LparaFlow
-
-lpara_urls = FlowViewSet(LparaFlow).urls
 
 urlpatterns = [
     url(r'^$', generic.RedirectView.as_view(url='/workflow/', permanent=False)),
